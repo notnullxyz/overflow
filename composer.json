@@ -1,0 +1,42 @@
+{
+    "name": "notnullxyz/overflow",
+    "description": "BitX/Luno Transaction Tool",
+    "keywords": ["bitx", "luno", "lumen", "transaction", "bitcoin", "reportings"],
+    "license": "GPLv3",
+    "type": "project",
+	"authors": [
+        {
+            "name": "Marlon B van der Linde",
+            "email": "marlon@notnull.xyz"
+        }
+    ],
+    "require": {
+        "php": ">=5.6.4",
+        "laravel/lumen-framework": "5.4.*",
+        "vlucas/phpdotenv": "~2.2",
+		"neilgarb/bitx": "dev-master"
+    },
+    "require-dev": {
+        "fzaninotto/faker": "~1.4",
+        "phpunit/phpunit": "~5.0",
+        "mockery/mockery": "~0.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "autoload-dev": {
+        "classmap": [
+            "tests/",
+            "database/"
+        ]
+    },
+    "scripts": {
+        "post-root-package-install": [
+            "php -r \"copy('.env.example', '.env');\""
+        ]
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
